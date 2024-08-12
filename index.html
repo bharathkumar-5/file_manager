@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Management System</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="file-manager">
+        <header>
+            <h1>File Manager</h1>
+            <input type="file" id="file-input" class="file-input" multiple>
+            <button id="bin-button" class="btn">View Bin</button>
+        </header>
+        <main id="files-container" class="container"></main>
+        <!-- <button id="bin-button">View Bin</button> -->
+    </div>
+    <aside id="bin" class="hidden">
+        <header>
+            <h2>Bin</h2>
+            <button id="clear-bin" class="btn btn-danger">Clear Bin</button>
+        </header>
+        <div id="bin-files-container" class="container"></div>
+    </aside>
+    <div id="edit-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-edit-modal" class="close">&times;</span>
+            <h3>Edit File Name</h3>
+            <input type="text" id="edit-file-name" class="input" />
+            <button id="confirm-edit" class="btn">Confirm</button>
+        </div>
+    </div>
+    <div id="confirm-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-confirm-modal" class="close">&times;</span>
+            <p id="confirm-message"></p>
+            <button id="confirm-yes" class="btn btn-primary">Yes</button>
+            <button id="confirm-no" class="btn btn-secondary">No</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
